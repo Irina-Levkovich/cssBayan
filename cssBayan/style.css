@@ -1,33 +1,124 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25 px;
-    line-height: 1.5;
-    background-color: red;
+*{padding: 0;
+margin: 0;
+border: 0;
 }
-p{
-    margin: 0 0 5px;
-}
-.fag{
-    max-width: 500px;
-    margin: 20px*auto;
-    
-}
-.fag-item{
-    display:block;
-    color:aqua;
-    cursor:pointer;
 
+body{
+    text-align: center;
+    position:block;
+    margin: 180px*100px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    background-color: rgb(232, 236, 173);
+    font-size: 20px;;
+    font-family: "Brush Script MT";
 }
-.fag-title{
+
+::before
+::after{
+    text-align: center;
+    box-sizing: none;
+}
+
+h1{ margin: 0;
+    padding: 1px;
+    text-shadow: 4px 4px 6px rgb(114, 233, 163);
+}
+
+p{  position:-webkit-sticky;
     display: block;
-    color:azure;
-    cursor:pointer;
-    
+    width: 500px;
+    height: 600px;
+    background-repeat: no-repeat;    
+    text-align:center;  
+    font-style:initial;  
+    color: rgb(190, 7, 7);
+    text-shadow: 5px 5px 3px rgb(226, 235, 230);
+    font-size: 55px;;
+    font-family: "Brush Script MT";    
 }
-.fag-input{
+
+.akkord{
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #4CAF50;
+    margin: auto;
+    max-width: 700px;
+    text-align: center;
+    display:block;
+    align-items: center;
+    min-height: 28vh;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+        
+}
+
+.akkord-start{
     width: 0;
     height: 0;
-    -webkit-appearance: none;
     appearance: none;
     position: absolute;
+    transition: 2s ease-in-out;
+    
 }
+.akkord-start.hover{
+    background-color: crimson;
+}
+
+.akkord-img{
+    text-align: center;
+    display:none;
+    font-size: 14px;
+    padding: 10px 15px;   
+}
+
+.akkord-title{
+    border: 2px solid rgb(16, 66, 68);
+    display:block;    
+    text-align: center;
+    padding: 0.5px 1px;
+    position: relative;
+    font-size: 25px;;
+    font-family: "Brush Script MT", cursive;
+    color:rgb(8, 24, 24);
+    cursor:pointer;
+    transition:2s ease-out;  /*значит задержка до изменения 2 сек*/
+    
+}
+
+.akkord-title:hover{/*это значит, что при наведении что-то меняется     hover*/
+    background-color: crimson;
+}    
+        
+.akkord-title:after{
+    content:"";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    transparent;    
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    
+}
+
+.akkord-start:hover ~ .akkord-img{    /*при нажатии показывается блок img*/
+    display: block;
+    }
+.akkord-start:checked ~ .akkord-img::after{/*после*/
+    display: none;
+}
+
+.akkord-img:hover{
+    box-shadow: 38px 15px 24px 0px rgba(66, 68, 90, 1);
+    transition: 1s;
+
+}  
+.akkord-title.after{
+    background-color: aqua;
+}
+
+
+
+
